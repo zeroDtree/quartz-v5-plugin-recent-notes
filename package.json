@@ -44,6 +44,7 @@
   "devDependencies": {
     "@types/node": "^25.0.10",
     "esbuild": "^0.27.2",
+    "github-slugger": "^2.0.0",
     "preact": "^10.28.2",
     "tsup": "^8.5.0",
     "typescript": "^5.9.3",
@@ -53,7 +54,10 @@
   "quartz": {
     "name": "quartz-v5-plugin-recent-notes",
     "displayName": "Recent Notes",
-    "category": ["component", "pageType"],
+    "category": [
+      "component",
+      "pageType"
+    ],
     "version": "1.0.0",
     "quartzVersion": ">=5.0.0",
     "defaultOrder": 50,
