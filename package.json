@@ -1,0 +1,80 @@
+{
+  "name": "@zerodtree/quartz-v5-plugin-recent-notes",
+  "version": "0.1.0",
+  "description": "Recent notes list with a title that can link to a full listing.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeroDtree/quartz-v5-plugin-recent-notes"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run test"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "dependencies": {
+    "@quartz-community/types": "^0.3.0",
+    "@quartz-community/utils": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "esbuild": "^0.27.2",
+    "preact": "^10.28.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vfile": "^6.0.3",
+    "vitest": "^2.1.9"
+  },
+  "quartz": {
+    "name": "quartz-v5-plugin-recent-notes",
+    "displayName": "Recent Notes",
+    "category": ["component", "pageType"],
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "limit": 3,
+      "linkToMore": false,
+      "showTags": true,
+      "showTitle": true,
+      "hideTagPages": false,
+      "hideFolderPages": false
+    },
+    "components": {
+      "RecentNotes": {
+        "displayName": "Recent Notes",
+        "defaultPosition": "right",
+        "defaultPriority": 12
+      }
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
